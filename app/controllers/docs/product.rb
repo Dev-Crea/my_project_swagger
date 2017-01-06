@@ -8,11 +8,12 @@ module Docs
       summary: 'Product list',
       consumes: ['application/json', 'application/xml'],
       produces: ['application/json', 'application/xml'],
-      responses: {
-        OK: {
-          description: 'Product list finding'
-        }
-      }
+      responses: [200, 422]
+      # responses: {
+      #   OK: {
+      #     description: 'Product list finding'
+      #   }
+      # }
     }
 
     swagger_doc ProductsController, :create, {
@@ -28,15 +29,28 @@ module Docs
       summary: 'Edit product',
       description: 'Display a form product.',
       parameters: [
-        { name: 'name', in: 'formData', required: 'true' }
-      ]
+        [ :name, :form_data, 'Name to product', :string, true ],
+        [ :category, :form_data, 'category ID to product', :string ]
+      ],
+        # name: in, description, required, other
+        # name -> Symbol
+        # in -> Symbol
+        # description -> String
+        # required -> Boolean
+        # other -> Hash
+      # parameters: [
+      #   { name: 'name', in: 'formData', required: 'true' }
+      # ]
     }
 
     swagger_doc ProductsController, :show, {
       summary: 'Show product',
       parameters: [
-        { name: 'id', in: 'path', description: 'ID unique to product', required: true, type: 'string' }
+        [ :id, :path, 'ID unique to product', :string, true, { default_value: 4 } ]
       ],
+      # parameters: [
+      #   { name: 'id', in: 'path', description: 'ID unique to product', required: true, type: 'string' }
+      # ],
       description: <<EOS
 ## Return a product
 

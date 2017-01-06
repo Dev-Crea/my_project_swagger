@@ -1,29 +1,4 @@
 {
-  "host": "localhost:3000",
-  "schemes": [
-    "http"
-  ],
-  "basePath": "/",
-  "swagger": "2.0",
-  "externalDocs": {
-    "description": "Find more information",
-    "url": "https://github.com/Dev-Crea/swagger-docs-generator"
-  },
-  "info": {
-    "version": "v1",
-    "description": "API fort management of product with category by product. It's an example of\nrails project with swagger_doc_generator gem for generate swagger doc file.\n",
-    "license": {
-      "name": "MIT",
-      "url": "http://localhost:3000/license"
-    },
-    "title": "API http://example.com",
-    "terms_of_service": "http://localhost:3000/cgu",
-    "contact": {
-      "name": "API Support",
-      "url": "http://localhost:3000/support",
-      "email": "api@support.localhost.example"
-    }
-  },
   "paths": {
     "/products.json": {
       "get": {
@@ -199,40 +174,8 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "products",
-      "description": "Product management"
-    }
-  ],
-  "definitions": {
-    "Category": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "created_at": {
-          "type": "datetime"
-        },
-        "updated_at": {
-          "type": "datetime"
-        }
-      }
-    },
-    "Product": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "created_at": {
-          "type": "datetime"
-        },
-        "updated_at": {
-          "type": "datetime"
-        }
-      }
-    }
+  "tags": {
+    "name": "products",
+    "description": "Product management"
   }
 }
