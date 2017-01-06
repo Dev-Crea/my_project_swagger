@@ -1,0 +1,185 @@
+{
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/",
+  "swagger": "2.0",
+  "externalDocs": {
+    "description": "Find more information",
+    "url": "https://github.com/Dev-Crea/swagger-docs-generator"
+  },
+  "info": {
+    "version": "v1",
+    "description": "API fort management of product with category by product. It's an example of\nrails project with swagger_doc_generator gem for generate swagger doc file.\n",
+    "license": {
+      "name": "MIT",
+      "url": "http://localhost:3000/license"
+    },
+    "title": "API http://example.com",
+    "terms_of_service": "http://localhost:3000/cgu",
+    "contact": {
+      "name": "API Support",
+      "url": "http://localhost:3000/support",
+      "email": "api@support.localhost.example"
+    }
+  },
+  "paths": {
+    "/products.json": {
+      "get": {
+        "responses": {
+          "OK": {
+            "description": "Product list finding"
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "summary": "Product list"
+      },
+      "post": {
+        "responses": {
+          "ok": {
+            "description": "Request successfully processed."
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "summary": "Create product"
+      }
+    },
+    "/products/new.json": {
+      "get": {
+        "responses": {
+          "ok": {
+            "description": "Request successfully processed."
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Display a form product.",
+        "summary": "New product"
+      }
+    },
+    "/products/{id}/edit.json": {
+      "get": {
+        "responses": {
+          "ok": {
+            "description": "Request successfully processed."
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "formData",
+            "required": "true"
+          }
+        ],
+        "description": "Display a form product.",
+        "summary": "Edit product"
+      }
+    },
+    "/products/{id}.json": {
+      "get": {
+        "responses": {
+          "ok": {
+            "description": "Request successfully processed."
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID unique to product",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "description": "## Return a product\n\nDisplay information about product\n",
+        "summary": "Show product"
+      },
+      "put": {
+        "responses": {
+          "ok": {
+            "description": "Request successfully processed."
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Update product",
+        "summary": "Update product"
+      },
+      "patch": {
+        "responses": {
+          "ok": {
+            "description": "Request successfully processed."
+          }
+        },
+        "tags": [
+          "products"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Update product",
+        "summary": "Update product"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "products",
+      "description": "Product management"
+    }
+  ]
+}
